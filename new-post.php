@@ -13,6 +13,63 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   
+    <script>
+    function validateForm() {
+      var title = document.forms["jobupload"]["title"];
+      var company = document.forms["jobupload"]["company"];
+      var image = document.forms["jobupload"]["image"];
+      var email = document.forms["jobupload"]["email"];
+      var jtype = document.forms["jobupload"]["jtype"];
+      var location = document.forms["jobupload"]["Location"];
+      var info = document.forms["jobupload"]["info"];
+
+      if (title.value == "")
+      {
+        window.alert("please enter your job title");
+        name.focus();
+        return false;
+
+      }
+      if (company.value == "")
+      {
+        window.alert("please enter your company name");
+        name.focus();
+        return false;
+
+      }
+
+      if (email.value=="")
+      {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+
+      }
+
+      if (email.value.indexOf("@", 0) < 0)                 
+      { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+      }
+
+      if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    }
+    if (Location.value == "")                               
+    { 
+        window.alert("Please enter your location."); 
+        name.focus(); 
+        return false; 
+    } 
+
+
+
+    }
+    </script>
   
   </head>
 <body>
@@ -77,7 +134,9 @@
       <div class="main1">
         
         <div class="mail">
-          <form action="new-post.php" method="POST" > 
+
+        <!-- methana return ekak daannna -->
+          <form action="new-post.php" method="POST" name="jobupload" onsubmit="return validateForm()" > 
                   <div class="form-group">
                     <label><b>Job Title</b></label>
                     <input type="text" class="form-control" name="title" placeholder="eg: Full Stack Frontend"><br>
