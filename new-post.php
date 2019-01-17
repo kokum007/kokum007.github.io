@@ -16,7 +16,7 @@
     <script>
     function validateForm() {
       var title = document.forms["jobupload"]["title"];
-      var company = document.forms["jobupload"]["company"];
+      var company = document.forms["jobupload"]["Company"];
       var image = document.forms["jobupload"]["image"];
       var email = document.forms["jobupload"]["email"];
       var jtype = document.forms["jobupload"]["jtype"];
@@ -33,12 +33,12 @@
       if (company.value == "")
       {
         window.alert("please enter your company name");
-        name.focus();
+        company.focus();
         return false;
 
       }
 
-      if (email.value=="")
+      if (email.value == "")
       {
         window.alert("Please enter a valid e-mail address.");
         email.focus();
@@ -46,20 +46,7 @@
 
       }
 
-      if (email.value.indexOf("@", 0) < 0)                 
-      { 
-        window.alert("Please enter a valid e-mail address."); 
-        email.focus(); 
-        return false; 
-      }
-
-      if (email.value.indexOf(".", 0) < 0)                 
-    { 
-        window.alert("Please enter a valid e-mail address."); 
-        email.focus(); 
-        return false; 
-    }
-    if (Location.value == "")                               
+    if (location.value == "")                               
     { 
         window.alert("Please enter your location."); 
         name.focus(); 
@@ -136,7 +123,7 @@
         <div class="mail">
 
         <!-- methana return ekak daannna -->
-          <form action="new-post.php" method="POST" name="jobupload" onsubmit="return validateForm()" > 
+          <form action="new-post.php" method="POST" name="jobupload" onsubmit="return validateForm()"  > 
                   <div class="form-group">
                     <label><b>Job Title</b></label>
                     <input type="text" class="form-control" name="title" placeholder="eg: Full Stack Frontend"><br>
