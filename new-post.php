@@ -14,6 +14,16 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   
     <script>
+
+function validateRadio (radios)
+{
+    for (i = 0; i < radios.length; ++ i)
+    {
+        if (radios [i].checked) return true;
+    }
+    return false;
+}
+
     function validateForm() {
       var title = document.forms["jobupload"]["title"];
       var company = document.forms["jobupload"]["Company"];
@@ -52,6 +62,18 @@
         name.focus(); 
         return false; 
     } 
+
+    if(validateRadio (document.forms["jobupload"]["jtype"]))
+    {
+        return true;
+    }
+    else
+    {
+        alert('Please select job type');
+        return false;
+    }
+    
+
 
 
 
@@ -122,7 +144,7 @@
         
         <div class="mail">
 
-        <!-- methana return ekak daannna -->
+        
           <form action="new-post.php" method="POST" name="jobupload" onsubmit="return validateForm()"  > 
                   <div class="form-group">
                     <label><b>Job Title</b></label>
