@@ -53,7 +53,7 @@
 }
 
 .tp {
-  padding-right: 20%;
+  padding-right: 25%;
   float: right;
  
 
@@ -67,9 +67,9 @@
 }
 .midtex{
    width:80%;
-  padding-left:12%;
+  padding-left:2%;
   padding-top: 8%;
-  font-size: 550%;
+  font-size: 50%;
 }
 
 .pic {
@@ -92,8 +92,8 @@ th {
 .jobdesc{
   float: left;
   width:50%;
-  padding-left: 200px;
-  padding-right: 100px;
+  padding-left: 300px;
+  padding-right: 50px;
   border-color: #26baee;
 }
 
@@ -128,7 +128,6 @@ th {
 
 .jddesc{
   float: left;
-  width: 120%;
 }
 
 .applymail{
@@ -153,23 +152,4 @@ th {
   color: #ffffff;
   padding-left: 5px;
   width: 45px;
-}
-
-.mainback {
-  height: 100%;
-}
-
-.recent{
-  float: right;
-  width: 80%;
-  padding-right: 20%;
-  
-}
-
-.latest{
-  padding-left: 10%;
-  font-size: 60px;
-  color: #1A9FCA;
-  padding-bottom: 72px;
-
 }

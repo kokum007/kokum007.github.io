@@ -12,8 +12,8 @@
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  
-    <script>
+ 
+ <script>
 
 function validateRadio (radios)
 {
@@ -27,7 +27,6 @@ function validateRadio (radios)
     function validateForm() {
       var title = document.forms["jobupload"]["title"];
       var company = document.forms["jobupload"]["Company"];
-      var image = document.forms["jobupload"]["image"];
       var email = document.forms["jobupload"]["email"];
       var jtype = document.forms["jobupload"]["jtype"];
       var location = document.forms["jobupload"]["Location"];
@@ -72,13 +71,11 @@ function validateRadio (radios)
         alert('Please select job type');
         return false;
     }
-    
-
-
 
 
     }
     </script>
+  
   
   </head>
 <body>
@@ -86,54 +83,45 @@ function validateRadio (radios)
 <div class="top">
       <div>
 
-      	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        			<div class="title">
-        		        
-        		        <a class="navbar-brand" href="#">
-      	  			<h2>Job<strong>Seeker</strong></h2></a>
-          		    </div>
-         			<div class="tmenu">
-        				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-         				<span class="navbar-toggler-icon"></span>
-        				</button>
-      		    </div>	
-        			<div class="collapse navbar-collapse" id="navbarNavDropdown">
-          			<ul class="navbar-nav">
-            				<li class="nav-item active">
-              				<a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-            				</li>
-            						<pre>    </pre> 
-            				<li class="nav-item">
-            					<a class="nav-link" href="about.html">About</a>
-            				</li>
-            						<pre>    </pre> 
-            				<li class="nav-item">
-              				<a class="nav-link" href="contact.html">Contact</a>
-            				</li>
-            						<pre>    </pre> 
-
-                
-              	<div class="dropdown">
-                  <li class="nav-item">
-               	<span>Category</span>
-                		<div class="dropdown-content">
-                  		<p><a class = "black_link" href="#">Full Time</a></p>
-                  		<p><a class = "black_link" href="#">Part Time</a></p>
-                  		<p><a class = "black_link" href="#">Freelance</a></p>
-                  		<p><a class = "black_link" href="#">Internship</a></p>
-                  		<p><a class = "black_link" href="#">Termporary</a></p>
-                		</div>
+      	 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="title">
+                    
+                    <a class="navbar-brand" href="">
+                <h2>Job<strong>Seeker</strong></h2></a>
+                  </div>
+              <div class="tmenu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>  
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
-              	</div>
-              
-            						<pre>      </pre> 
-            				<li class="nav-item">
-              				<a href="new-post.html"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a>
-            				</li>
-          			</ul>
-        			</div>
+                       <pre>    </pre> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="latest.php">Latest</a>
+                    </li>
+                        <pre>    </pre> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">About</a>
+                    </li>
+                        <pre>    </pre> 
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
 
-      	  </nav>
+
+              
+                        <pre>      </pre> 
+                    <li class="nav-item">
+                      <a href="new-post.php"><span class="rounded bg-primary py-2 px-3 text-white"><span class="h5 mr-2">+</span> Post a Job</span></a>
+                    </li>
+                </ul>
+              </div>
+
+        </nav>
 
           
       </div>
@@ -143,9 +131,7 @@ function validateRadio (radios)
       <div class="main1">
         
         <div class="mail">
-
-        
-          <form action="new-post.php" method="POST" name="jobupload" onsubmit="return validateForm()"  > 
+          <form action="new-post.php" method="POST" name="jobupload" onsubmit="return validateForm()"> 
                   <div class="form-group">
                     <label><b>Job Title</b></label>
                     <input type="text" class="form-control" name="title" placeholder="eg: Full Stack Frontend"><br>
@@ -153,11 +139,6 @@ function validateRadio (radios)
                   <div class="form-group">
                     <label><b>Company</b></label>
                     <input type="text" class="form-control" name="Company"><br>
-                  </div>
-
-                  <div class="form-group">
-                  <label><b>Insert Your Company Logo</b></label><br>
-                  <input type="file" name="imge"><br><br>
                   </div>
 
                   <div class="form-group">
@@ -181,7 +162,7 @@ function validateRadio (radios)
                   
                   <div class="form-group">
                     <label for="exampleFormControlTextarea1"><b>Job Description</b></label>
-                    <textarea class="form-control" name="info"  rows="5"></textarea>
+                    <textarea class="form-control" name="info"  rows="10" ><pre><font color="gray"><!-- Do Not Erase this tags--> </textarea>
                   </div>
 
                   <div class="form-group">
@@ -217,22 +198,19 @@ include_once 'dbcon.php';
 $info = $_POST["info"];
 $tit = $_POST['title']; 
 $Com = $_POST['Company'];
-$logo = $_POST['imge'];
 $email = $_POST['email'];
 $jype = $_POST['jtype'];
 $Loc = $_POST['Location'];
-$my_date = date('Y-m-d H:i:s');
+$my_date = date('Y-m-d');
 
 
 
-$sql = "INSERT INTO jobdata (Job_Title,Company,Logo,Email,Job_Type,Location,Job_Description,Date_Time ) 
-        VALUES ('$tit','$Com','$logo',' $email ','$jype','$Loc','$info','$my_date')";
+$sql = "INSERT INTO jobdata (Job_Title,Company,Email,Job_Type,Location,Job_Description,Date_Time ) 
+        VALUES ('$tit','$Com','$email ','$jype','$Loc','$info','$my_date')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record inserted successfully";
-} else {
-    echo "Error insering record: " . $conn->error;
-}
+} 
 
 $conn->close();
 ?>     

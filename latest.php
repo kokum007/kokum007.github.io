@@ -1,49 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      JobSeeker
-    </title>
-
- 
-    <style type="text/css">
+<head>
+	<title>JobSeeker</title>
+	<style type="text/css">
       body{
         background-image:url('images/main.jpg');
         background-attachment:fixed;
         background-repeat: no-repeat;
         background-size: cover;
-}
-
-      }
-
-      p#small{
-        font-size: 50%;
-      }
-
-      p#big{
-        font-size: 120%;
-      }
-
-      p#alert{
-            color: rgb(255, 0, 51);
-      }
-    </style>
-
-    <script>
-      function validateForm()
-      {
-        var job=document.forms["home1"]["search"];
-        if (job.value == "")
-        {
-        document.getElementById("alert").innerHTML= "Complete requiered fields" ;
-        job.focus();
-        return false;
-
         }
-      }
-    
-    
-    </script>
+     </style>
+
 
     <link rel="stylesheet" href="css/Style.css" type="text/css">
     <link rel="stylesheet" href="css/animate.css" type="text/css">
@@ -52,16 +19,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
 
 
-  </head>
+      
+</head>
 <body>
-    
 <div class="top">
-      <div>
+	<div>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <div class="title">
                     
                     <a class="navbar-brand" href="">
@@ -101,45 +69,8 @@
 
         </nav>
       </div>
-    
 
-      <div>
-      <div class="midtex">
-		  <pre><p id="big"><b>Largest Job</b> Site</p><font size="10"><i> On The Internet</i></font></p></pre>
-      </div>
-      <div class="mid">
-      <form  action="Job-single.php" method="POST" name="home1" onsubmit="return validateForm()">
-      <button type="button" class="btn btn-primary">Search a Job...</button>
-        <div class="form-row align-items-center">
-          <div class="col-auto my-1">
-            <input type="text" name="search" class="form-control form-control-block search-input"  placeholder="Eg: Graphic designing" >
-          </div>
-          <div class="col-auto my-1">
-            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="type">
-              <option selected>Category...</option>
-              <option value="Full Time">Full time</option>
-              <option value="Part Time">Part time</option>
-              <option value="Freelance">Freelance</option>
-              <option value="Internship">Internship</option>
-              <option value="Temporary">Temporary</option>
-            </select>
-          </div>
-          <div class="col-auto my-1">
-            <div class="custom-control custom-checkbox mr-sm-2">
-             <input type="text" class="form-control form-control-block search-input" id="autocomplete" placeholder="Location" onFocus="geolocate()" name="loc">
-            </div>
-          </div>
-          <div class="col-auto my-1">
-            <button type="submit" value="search" name="submit" class="btn btn-primary">Search</button>
-          </div>
-        </div>
-         <p id="alert"></p>
-      </form>
-
-
-      </div>
-     </div> 
-         <div class="latest">
+      <div class="latest">
           <b>Latest Jobs</b>
          </div>
      
@@ -199,5 +130,6 @@
             
      
 </div>      
+
 </body>
 </html>
